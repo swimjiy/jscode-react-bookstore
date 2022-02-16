@@ -1,7 +1,9 @@
+import CardItem from './components/CardItem';
+
 const App = () => {
   return (
     <div>
-      Hello World!
+      <CardItem />
     </div>
   );
 }
