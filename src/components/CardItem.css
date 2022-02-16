@@ -1,6 +1,6 @@
 .card-item {
-  width: 208px;
   display: inline-block;
+  width: 100%;
 }
 
 .card-item-img {

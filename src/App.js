@@ -1,9 +1,9 @@
-import CardItem from './components/CardItem';
+import CardList from './components/CardList';
 
 const App = () => {
   return (
     <div>
-      <CardItem />
+      <CardList />
     </div>
   );
 }
