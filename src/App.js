@@ -1,9 +1,11 @@
-import CardList from './components/CardList';
+import TopBar from './components/TopBar';
+import MainScreen from './screens/MainScreen';
 
 const App = () => {
   return (
     <div>
-      <CardList />
+      <TopBar />
+      <MainScreen />
     </div>
   );
 }
