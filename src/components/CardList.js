@@ -1,15 +1,12 @@
 import './CardList.css';
 import CardItem from './CardItem';
 
-const CardList = () => {
+const CardList = ({ bookList }) => {
   return (
     <ul className="card-list">
-      <CardItem />
-      <CardItem />
-      <CardItem />
-      <CardItem />
-      <CardItem />
-      <CardItem />
+      {bookList.map((bookItem) => (
+        <CardItem key={bookItem.url} item={bookItem} />
+      ))}
     </ul>
   );
 }
