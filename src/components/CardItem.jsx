@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './CardItem.css';
 
 const CardItem = ({ item }) => {

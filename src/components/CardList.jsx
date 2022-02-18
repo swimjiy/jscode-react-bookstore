@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './CardList.css';
 import CardItem from './CardItem';
 

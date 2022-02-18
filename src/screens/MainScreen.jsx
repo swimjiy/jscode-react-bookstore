@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './MainScreen.css';
 import CardList from '../components/CardList';
 import bookData from '../data/bookData.json';
