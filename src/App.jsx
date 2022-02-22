@@ -1,3 +1,5 @@
+import React from 'react';
+
 import TopBar from './components/TopBar';
 import MainScreen from './screens/MainScreen';
 
