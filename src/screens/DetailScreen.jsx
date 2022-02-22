@@ -4,13 +4,12 @@ import { useParams } from 'react-router-dom';
 import './DetailScreen.css';
 import CardList from '../components/CardList';
 import BookmarkButton from '../components/BookmarkButton';
-import bookData from '../data/bookData.json';
 
-const DetailScreen = () => {
+const DetailScreen = ({ bookData }) => {
   const { bookId } = useParams();
   const [isBookmarked, setIsBookmarked] = React.useState(false);
-  const currentBookData = bookData.data.find((book) => book.isbn === bookId);
-  const otherBooksData = bookData.data.filter((book) => book.isbn !== currentBookData.isbn)
+  const currentBookData = bookData.find((book) => book.isbn.includes(bookId));
+  const otherBooksData = bookData.filter((book) => book.isbn !== currentBookData.isbn)
   React.useEffect(() => {
     if (bookId) {
       setIsBookmarked(false);
@@ -24,7 +23,7 @@ const DetailScreen = () => {
     <div className="detail-container">
       <div className="detail-book">
         <div className="detail-book-img">
-          <img src={currentBookData.thumbnail} alt="책 커버"/>
+          <img src={currentBookData.thumbnail.replace('R120x174', 'C232x336')} alt="책 커버"/>
         </div>
         <div className="detail-book-content">
           <h2>

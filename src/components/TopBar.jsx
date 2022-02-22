@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import bookData from '../data/bookData.json';
 import './TopBar.css';
 
-const TopBar = () => {
+const TopBar = ({ bookData }) => {
   const navigate = useNavigate();
   const [value, setValue] = React.useState('');
-  const filteredData = bookData.data.filter((book) => book.title.includes(value));
+  const filteredData = bookData.filter((book) => book.title.includes(value));
   const handleClick = ((id) => {
     navigate(`/books/${id}`)
     setValue('');
