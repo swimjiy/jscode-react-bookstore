@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './TopBar.css';
 
@@ -7,7 +8,7 @@ const TopBar = () => {
     <header className="topbar">
       <div className="topbar-inner">
         <h1>
-          <a href="/" className="topbar-logo">윌리의 서재</a>
+          <Link to="/" className="topbar-logo">윌리의 서재</Link>
         </h1>
       </div>
     </header>

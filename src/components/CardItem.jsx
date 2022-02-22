@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './CardItem.css';
 
 const CardItem = ({ item }) => {
   return (
     <li>
-      <a href="#" className="card-item">
+      <Link to={`/books/${item.isbn}`} className="card-item">
         <div className="card-item-img">
           <img src={item.thumbnail} alt="책 커버"/>
         </div>
@@ -13,7 +14,7 @@ const CardItem = ({ item }) => {
           <strong className="card-item-title">{item.title}</strong>
           <span className="card-item-author">{item.author}</span>
         </div>
-      </a>
+      </Link>
     </li>
   );
 }

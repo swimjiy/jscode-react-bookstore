@@ -4,11 +4,7 @@ import './BookmarkButton.css';
 import bookmarkIcon from '../images/icon-bookmark.svg';
 import filledBookmarkIcon from '../images/icon-bookmark-filled.svg';
 
-const BookmarkButton = () => {
-  const [isBookmarked, setIsBookmarked] = React.useState(false);
-  const handleClick = () => {
-    setIsBookmarked(!isBookmarked);
-  };
+const BookmarkButton = ({ isBookmarked, handleClick }) => {
   return (
     <button
       onClick={handleClick}
